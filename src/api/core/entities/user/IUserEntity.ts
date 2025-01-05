@@ -1,0 +1,66 @@
+import { UserGenderTypeEnum, UserOnlineStatusEnum } from '../../enum';
+import { IPermissionEntity } from '../IPermissionEntity';
+import { IChatlogPrivateEntity, IChatlogRoomEntity } from '../logs';
+import { IRoomEntity } from '../room';
+import { IUserAchievementEntity } from './IUserAchievement';
+import { IUserAchievementQueueEntity } from './IUserAchievementQueueEntity';
+import { IUserBadgeEntity } from './IUserBadgeEntity';
+import { IUserClothingEntity } from './IUserClothingEntity';
+import { IUserCurrencyEntity } from './IUserCurrencyEntity';
+import { IUserEffectEntity } from './IUserEffectEntity';
+import { IUserFavoriteRoomEntity } from './IUserFavoriteRoomEntity';
+import { IUserIgnoreEntity } from './IUserIgnoreEntity';
+import { IUserNavigatorSettingEntity } from './IUserNavigatorSettingEntity';
+import { IUserPetEntity } from './IUserPetEntity';
+import { IUserRecipeEntity } from './IUserRecipeEntity';
+import { IUserSavedSearchEntity } from './IUserSavedSearchEntity';
+import { IUserSettingEntity } from './IUserSettingsEntity';
+import { IUserSubscriptionEntity } from './IUserSubscriptionEntity';
+import { IUserTargetOfferPurchaseEntity } from './IUserTargetOfferPurchaseEntity';
+import { IUserWardrobeEntity } from './IUserWardrobeEntity';
+import { IUserWindowSettingEntity } from './IUserWindowSettingEntity';
+
+export interface IUserEntity
+{
+    id: number;
+    username: string;
+    mail: string;
+    accountCreated: number;
+    lastLogin: number;
+    lastOnline: number;
+    motto: string;
+    look: string;
+    gender: UserGenderTypeEnum;
+    rank: number;
+    credits: number;
+    online: UserOnlineStatusEnum;
+    authTicket: string;
+    ipRegister: string;
+    ipCurrent: string;
+    machineId: string;
+    homeRoom: number;
+
+    achievements?: IUserAchievementEntity[];
+    achievementsQueue?: IUserAchievementQueueEntity[];
+    badges?: IUserBadgeEntity[];
+    clothing?: IUserClothingEntity[];
+    currencies?: IUserCurrencyEntity[];
+    effects?: IUserEffectEntity[];
+    favoriteRooms?: IUserFavoriteRoomEntity[];
+    ignoredUsers?: IUserIgnoreEntity[];
+    navigatorSettings?: IUserNavigatorSettingEntity;
+    pets?: IUserPetEntity[];
+    recipes?: IUserRecipeEntity[];
+    savedSearches?: IUserSavedSearchEntity[];
+    settings?: IUserSettingEntity;
+    subscriptions?: IUserSubscriptionEntity[];
+    targetOfferPurchases?: IUserTargetOfferPurchaseEntity[];
+    wardrobe?: IUserWardrobeEntity[];
+    windowSetting?: IUserWindowSettingEntity;
+    permission?: IPermissionEntity;
+    chatlogRoomSent?: IChatlogRoomEntity[];
+    chatlogRoomRecieved?: IChatlogRoomEntity[];
+    chatlogPrivateSent?: IChatlogPrivateEntity[];
+    chatlogPrivateRecieved?: IChatlogPrivateEntity[];
+    rooms?: IRoomEntity[];
+}

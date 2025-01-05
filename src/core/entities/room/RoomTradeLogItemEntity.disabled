@@ -1,0 +1,14 @@
+import { Column, Entity } from 'typeorm';
+
+@Entity('room_trade_log_items')
+export class RoomTradeLogItemEntity
+{
+    @Column('int', { name: 'id' })
+    public id: number;
+
+    @Column('int', { name: 'item_id' })
+    public itemId: number;
+
+    @Column('int', { name: 'user_id' })
+    public userId: number;
+}

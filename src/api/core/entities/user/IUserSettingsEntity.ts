@@ -1,0 +1,60 @@
+import { OffOnEnum } from '../../enum';
+import { IUserEntity } from './IUserEntity';
+
+export interface IUserSettingEntity
+{
+    id: number;
+    userId: number;
+    credits: number;
+    achievementScore: number;
+    dailyRespectPoints: number;
+    dailyPetRespectPoints: number;
+    respectsGiven: number;
+    respectsReceived: number;
+    guildId: number;
+    canChangeName: OffOnEnum;
+    canTrade: OffOnEnum;
+    isCitizen: OffOnEnum;
+    citizenLevel: number;
+    helperLevel: number;
+    tradelockAmount: number;
+    cfhSend: number;
+    cfhAbusive: number;
+    cfhWarnings: number;
+    cfhBans: number;
+    blockFollowing: OffOnEnum;
+    blockFriendrequests: OffOnEnum;
+    blockRoominvites: OffOnEnum;
+    volumeSystem: number;
+    volumeFurni: number;
+    volumeTrax: number;
+    oldChat: OffOnEnum;
+    blockCameraFollow: OffOnEnum;
+    chatColor: number;
+    homeRoom: number;
+    onlineTime: number;
+    tags: string;
+    clubExpireTimestamp: number;
+    loginStreak: number;
+    rentSpaceId: number;
+    rentSpaceEndtime: number;
+    hofPoints: number;
+    blockAlerts: OffOnEnum;
+    talentTrackCitizenshipLevel: number;
+    talentTrackHelpersLevel: number;
+    ignoreBots: OffOnEnum;
+    ignorePets: OffOnEnum;
+    nux: OffOnEnum;
+    muteEndTimestamp: number;
+    allowNameChange: OffOnEnum;
+    perkTrade: OffOnEnum;
+    forumsPostCount: number;
+    uiFlags: number;
+    hasGottenDefaultSavedSearches: boolean;
+    hcGiftsClaimed: number;
+    lastHcPayday: number;
+    maxRooms: number;
+    maxFriends: number;
+
+    user?: IUserEntity;
+}
